@@ -1,0 +1,156 @@
+.Education-section{
+    /* border: 5px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    margin: 50px 0;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+
+.Education-section ul{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.Education-section ul li{
+    margin-bottom: 40px;
+}
+
+.Education-section .text {
+    flex: 5;
+    /* border: 3px solid red; */
+}
+
+.Education-section .text h1 {
+    font-size: 45px;
+}
+
+
+.Education-section .headshot img {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+
+.projects-section {
+    text-align: center;
+    /* border: 5px red solid; */
+    font-size: 45px;
+
+}
+
+.projects-section h1{
+    margin-bottom: 30px;
+}
+
+.img-container {
+    position: relative; 
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.img-container img {
+    width: 290px;
+    height: 190px;
+    border: 2px solid #1C608C;
+    border-radius: 20px;
+    box-shadow: 4px 7px 7px 0px black;
+    transition: transform 0.4s, filter 0.4s, box-shadow 0.4s;
+}
+
+.img-container:hover img {
+    box-shadow: 0 8px 16px rgba(0, 0, 0.3, 0.3);
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    border-radius: 0 0 20px 20px; /* optional for rounded bottom */
+    text-align: center;
+}
+
+.img-container:hover .description {
+    opacity: 1;
+    transform: translateY(-15%);
+}
+
+
+
+
+.scroll-wrapper {
+    margin-top:50px ;
+    margin-bottom:50px ;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+    width: 100vw;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.row {
+    display: flex;
+    gap: 400px;
+    animation: scroll 20s linear infinite;
+}
+
+.row img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: relative; /* or remove this line entirely */
+    margin-top: 40px; /* creates the gap you want */
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+
+@media (max-width: 1237px)
+{
+    .Education-section {
+        padding: 0 20px;
+        text-align: center ;
+    }
+
+    .Education-section ul {
+        list-style: none; 
+        padding: 0;    
+        margin: 0;         
+    }
+
+    .Education-section .text h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .Education-section .headshot{
+        display: none;
+    }
+}
